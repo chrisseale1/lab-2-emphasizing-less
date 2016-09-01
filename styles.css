@@ -50,7 +50,9 @@
   margin-bottom: -5em;
 }
 #name-section h1.name {
-  font-size: 3.25em;
+  font-size: 4.75em;
+  font-family: Big Caslon, Georgia, serif;
+  font-weight: bold;
   margin-bottom: -0.5em;
 }
 #name-section h3.title {
@@ -101,11 +103,12 @@
   margin-bottom: 1.5em;
 }
 #constrain .container .form-style {
-  margin-left: 3em;
-  margin-right: 3em;
+  margin-left: 5em;
+  margin-right: 5em;
+  width: 20em;
   background-color: #a2c6cf;
   display: block;
-  padding: 2em 4em 2em 6em;
+  padding: 2em 4em 2em 5em;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
