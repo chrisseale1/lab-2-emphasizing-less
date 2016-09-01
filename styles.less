@@ -1,220 +1,190 @@
 @import 'variables.less';
 @import 'mixins.less';
 
-a {
-    text-decoration: none;
-    color: @main-lightblue;
+//general
+*{
+    font-family: @mainFont;
 }
 
-ul.nav {
-    background-color: @main-lightblue;
-    height: 45px;
-    width: 100%;
-    position: fixed;
-    color: white;
-    text-decoration: none;
-    margin-top: -10px;
-    margin-left: -9px;
-    padding: 20px 0px 0px 0px;
+.text-center{
     text-align: center;
-    list-style: none;
-    z-index: 999999;
-    
-    a {
-    text-decoration: none;
-    color: white;
 }
-    
-    li.nav-categories {
-        display: inline-block;
-        position: relative;
-        padding: 0px 10px 0px 10px;
-        
-        a:hover{
-            color: @hover-color; 
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.space{
+    height: 5em;
+}
+
+//begin navbar
+
+#navbar{
+    height: 3em;
+    background-color: @mainBlue;
+    color: white;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    ul.sections{
+        color: white;
+        li{
+            margin-left: 1em;
+            margin-right: 1em;
+            display: inline;
+            text-decoration: none;
+            color: white;
+            a:link{
+                color: white;
+                text-decoration: none;
+            }
+            a:hover{
+                color: white;
+                text-decoration: none;
+                background-color: @hoverColor;
+            }
+            a:visited{
+                color: white;
+            }
+
         }
+    }
+}
+//end navbar
+
+//begin name section
+#name-section{
+    margin-top: 5em;
+    margin-bottom: -5em;
+    h1.name{
+        font-size: 3.25em;
+        margin-bottom: -0.5em;
+    }
+    h3.title{
+        font-size: 1.55em;
     }
 }
 
-.container {
-    padding-top: 50px;
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    .name-box {
-        background-color:  white;
-        top: 0px;
-        left: 0px;
-        height: 30px;
-        border: 2px black;
-        text-align: center;
-        
-        .Name-heading {
-            color: black;
-            text-align: center;
-            top: 25px;
-            position: relative;
-        }
+//begin constrain and rest of main body
+#constrain{
+    margin-left: 10em;
+    margin-right: 10em;
+    .jump{
+        padding-top: -3em;
+        height: 3em;
     }
-    
-    .h2-subheading {
+    .subheading{
+        margin-top: 1em;
+        border-top: 0.08em solid @mainBlue;
+        border-bottom: 0.08em solid @mainBlue;
         background-color: white;
-        height: 40px;
-        width: 100%;
-        top: 50px;
-        border-top: solid 2px @main-lightblue;
-        border-bottom: solid 2px @main-lightblue;
-        position: relative;
-        text-align: center;
-        line-height: 40px;
+        clear: both;
     }
-        
-    .both-paragraphs {
-         height: 300px;
-         padding-top: 50px;
-         margin-left: 25px;
-         margin-right: 25px;
-         padding-bottom: 100px;
-         width: 100%;
-    }       
-         .left-paragraph {
-            margin-left: 50px;
-            height: 100px;
-            width: 40%;
+    .container{
+        margin-left: 3em;
+        margin-right: 3em;
+        p.para-left{
             float: left;
-         }
-         .right-paragraph {
-            margin-right: 75px;
-            height: 100px;
-            width: 40%;
-            top: 25px;
+            width: 48%;
+        }
+        p.para-right{
             float: right;
-         }
-    }
-    .skills-container {
-         height: 50px;
-         padding-top: 50px;
-         margin-left: 25px;
-         margin-right: 25px;
-         padding-bottom: 75px;
-         width: 100%;
-    } 
-        .left-paragraph {
-            margin-left: 50px;
-            height: 75px;
-            width: 40%;
-            float: left;
-         }
-         .right-paragraph {
-            margin-right: 75px;
-            height: 75px;
-            width: 40%;
-            top: 25px;
-            float: right;
-         }
-    
-    .projects {
-        padding-top: 25px;
-        margin-left: 75px;
-        margin-right: 75px;
-        padding-bottom: 0px;
-        width: 100%;
-        height: 200px;
-        
-        .paragraph-bold {
-            padding-top: 25px;
+            width: 48%;
+        }
+        h2.project-title{
+            margin-bottom: -0.5em;
             font-weight: bold;
         }
-        .paragraph-regular {
-            margin-top: -20px;
+        p.project-descrip{
+            margin-bottom: 1em;
         }
-    }
-    .experience {
-        margin-left: 75px;
-        padding-top: 25px;
-    }
-        .paragraph-bold {
-            padding-top: 25px;
-            font-weight: bold;
+        .date{
+            color: @mainBlue;
+            font-style: italic;
+            margin-left: 2.5em;
+            margin-bottom: -0.6em;
         }
-        .under-position-paragraphs {
-            margin-left: 10px;
-            margin-top: -20px;
+        .experience-description{
+            margin-left: 2.5em;
+            margin-bottom: 1.5em;
         }
-    .education {
-        margin-left: 75px;
-        padding-top: 25px;
-    }
-    .contact-container {
-        height: 350px;
-        margin-bottom: 100px;
-        
-        .contact-form {
-            .roundedCorners();
-            margin-top: 75px;
-            height: 350px;
-            width: 550px;
-            background-color: @main-lightblue;
-            margin-left: auto;
-            margin-right: auto;
-            color: white;
-            font-size: 15px;
-            padding-top: 10%;
-            padding-left: 14%; 
-            
-            .user-field {
-                .roundedCorners();
-                width: 350px;
-                height: 30px;
-                font-size: 17px;
-                margin-bottom: 10px;
-            } 
-            .user-message {
-                width: 350px;
-                height: 100px;
-                .roundedCorners();
-            }  
-            .send-button {
-                .roundedCorners();
-                background-color: white;
-                margin-top: 10px;   
-                width: 357px;
-                height: 37px;
-                color: @main-lightblue;
+        .form-style{
+            margin-left: 3em;
+            margin-right: 3em;
+            background-color: @mainBlue;
+            display: block;
+            padding: 2em 4em 2em 6em;
+            .roundedCorners;
+            label{
+                color: white;
+                text-transform: uppercase;
                 font-weight: bold;
-                font-size: 18px;
+                font-size: 1.25em;
+                text-align: left;
+                display: block;
+                margin-bottom: 0.25em;
+            }
+
+            input{
+                font-style: italic;
+                .roundedCorners;
+                border: 0;
+                width: 15em;
+                margin-bottom: 1em;
+                font-size: 1.25em;
+                text-align: left;
+            }
+
+            #message{
+                height: 10em;
+                .roundedCorners;
+                display: block;
+                width: 15em;
+                margin-bottom: 1em;
+            }
+
+            #submit{
+                color: @mainBlue;
+                background-color: white;
+                font-style: normal;
+                font-weight: bold;
+                width: 12.75em;
+                font-size: 1.5em;
+                .roundedCorners;
+                text-align: center;
             }
         }
-        .space {
-            height: 5px;
-            width: 100%;
-            border-bottom: solid @main-lightblue;
-        }
-    }    
+    }
+}
 
-.footer {
-        margin-left: auto;
-        margin-right: auto;
-        color: @main-lightblue;
-        margin-bottom: 5px;
-        text-decoration: none;
-        
-        .Github {
-            margin-left: 325px;
-            color: @main-lightblue;
-            float: left;
+//end main body, begin footer
+#footer{
+    color: @mainBlue;
+    margin-top: 1em;
+    margin-right: 10em;
+    margin-left: 10em;
+    border-top: 0.15em solid @mainBlue;
+    h4.links{
+        margin-bottom: -1em;
+        text-align: center;
+        a:link{
+            text-decoration: none;
+            color: @mainBlue;
         }
-        .LinkedIn {
-            margin-right: 325px;
-            color: @main-lightblue;
-            float: right;
+         a:visited{
+            color: @mainBlue;
         }
-        .copyright {
-            clear: both;
-            color: @main-lightblue;
-            padding-top: -10px;
-            text-align: center;
+        a:hover{
+            color: darkred;
         }
     }
+    h6.copyright{
+        text-align: center;
+        color: @mainBlue;
+    }
+}
